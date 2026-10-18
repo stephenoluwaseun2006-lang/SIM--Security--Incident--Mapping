@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIM - Security Incident Mapping</title>
+    <link rel="stylesheet"
+    href="style.css"> 
+</head>
+<body>
+
+    <h1>SIM - Security Incident Mapping</h1>
+
+    <p>
+        Welcome to the Security Incident Mapping platform.
+        This platform is designed to make reporting security
+        incidents within and around campus easier.
+    </p>
+
+    <h2>Report a Security Incident</h2>
+
+    <p>
+        Students, staff, and landlords can use this platform
+        to report security incidents.
+    </p>
+
+    <h3>Our Objectives</h3>
+
+    <ul>
+        <li>Make security incident reporting easier.</li>
+        <li>Help improve awareness of security incidents.</li>
+        <li>Support faster communication of security concerns.</li>
+    </ul>
+    <section class="report-section">
+
+    <h2>Report a Security Incident</h2>
+
+    <p>
+        Please provide accurate information about the incident.
+    </p>
+
+    <form id="incidentForm">
+
+        <label for="reporter">Your Role:</label>
+        <select id="reporter" name="reporter" required>
+            <option value="">Select your role</option>
+            <option value="Student">Student</option>
+            <option value="Staff">Staff</option>
+            <option value="Landlord">Landlord</option>
+        </select>
+
+        <label for="incidentType">Type of Incident:</label>
+        <select id="incidentType" name="incidentType" required>
+            <option value="">Select incident type</option>
+            <option value="Theft">Theft</option>
+            <option value="Assault">Assault</option>
+            <option value="Sexual Violence">Sexual Violence</option>
+            <option value="Stabbing">Stabbing</option>
+            <option value="Murder">Murder</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label for="location">Location of Incident:</label>
+        <input
+            type="text"
+            id="location"
+            name="location"
+            placeholder="Enter the incident location"
+            required
+        >
+
+        <label for="incidentDate">Date of Incident:</label>
+        <input
+            type="date"
+            id="incidentDate"
+            name="incidentDate"
+            required
+        >
+
+        <label for="incidentTime">Time of Incident:</label>
+        <input
+            type="time"
+            id="incidentTime"
+            name="incidentTime"
+            required
+        >
+
+        <label for="description">Description of Incident:</label>
+        <textarea
+            id="description"
+            name="description"
+            rows="5"
+            placeholder="Describe what happened"
+            required
+        ></textarea>
+
+        <button type="submit">Submit Report</button>
+
+        <p id="formMessage" role="status"></p>
+
+    </form>
+
+</section>
+<section class="reports-section">
+    <h2>Reported Incidents</h2>
+
+    <p id="noReports">No incidents have been reported yet.</p>
+
+    <div id="reportsList"></div>
+</section>
+<script src="script.js"></script>
+</body>
+</html>
